@@ -261,7 +261,7 @@ button:focus-visible {
   overflow-wrap: anywhere;
 }
 
-/* Tablet and mobile: form below profile */
+
 @media (max-width: 768px) {
   body {
     padding: 24px 16px;
@@ -292,7 +292,7 @@ button:focus-visible {
   }
 }
 
-/* Small mobile screens */
+
 @media (max-width: 380px) {
   body {
     padding: 14px 10px;
