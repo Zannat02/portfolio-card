@@ -2,49 +2,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Junior web developer profile card" />
-  <title>Developer Profile | Shawon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Developer profile and registration form">
+  <title>Developer Profile & Registration</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script src="form.js" defer></script>
 </head>
 <body>
-  <main class="profile-card">
-    <div class="avatar" aria-hidden="true">ZS</div>
 
-    <p class="eyebrow">HELLO, I'M</p>
-    <h1>Zannatul Ferdous Shawon</h1>
-    <h2>Junior Web Developer</h2>
+  <main class="page-container">
 
-    <p class="description">
-      I build responsive and user-friendly websites using
-      HTML, CSS, and JavaScript. I enjoy learning new
-      technologies and turning ideas into useful web experiences.
-    </p>
+    <!-- Developer Profile Card -->
+    <section class="profile-card">
+      <div class="avatar" aria-hidden="true">ZS</div>
 
-    <div class="buttons">
-      <button id="skills-btn" type="button">View Skills</button>
-      <button id="contact-btn" type="button">Contact Me</button>
-    </div>
+      <p class="eyebrow">HELLO, I'M</p>
+      <h1>Zannatul Ferdous Shawon</h1>
+      <h2>Junior Web Developer</h2>
 
-    <section id="skills" class="result" aria-live="polite" hidden>
-      <h3>My Skills</h3>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3 & Responsive Design</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>MongoDB</li>
-        <li>Firebase</li>
-      </ul>
+      <p class="description">
+        I build responsive and user-friendly websites using
+        HTML, CSS, and JavaScript. I enjoy learning new
+        technologies and turning ideas into useful web experiences.
+      </p>
+
+      <div class="buttons">
+        <button id="skills-btn" type="button">View Skills</button>
+        <button id="contact-btn" type="button">Contact Me</button>
+      </div>
+
+      <section id="skills" class="result" aria-live="polite" hidden>
+        <h3>My Skills</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3 & Responsive Design</li>
+          <li>JavaScript (ES6+)</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>Firebase</li>
+        </ul>
+      </section>
+
+      <p id="message" class="message" aria-live="polite" hidden></p>
+
+      <div class="card-footer">
+        Built with HTML, CSS & JavaScript
+      </div>
     </section>
 
-    <p id="message" class="message" aria-live="polite" hidden></p>
+    <!-- Registration Form -->
+    <section class="form-card">
+      <h2 class="form-title">Create Account</h2>
+      <p class="form-subtitle">Fill in the details to register.</p>
 
-    <div class="card-footer">Built with HTML, CSS & JavaScript</div>
+      <form id="registrationForm">
+
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            minlength="2"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Minimum 6 characters"
+            minlength="6"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Account Type</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="accountType" value="Student" required>
+              Student
+            </label>
+
+            <label>
+              <input type="radio" name="accountType" value="Professional">
+              Professional
+            </label>
+          </div>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I agree to the terms and conditions.</label>
+        </div>
+
+        <button class="register-btn" type="submit">Register Now</button>
+
+        <p id="form-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+
   </main>
+
 </body>
 </html>
